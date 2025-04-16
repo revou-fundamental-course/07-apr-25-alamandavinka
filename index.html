@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avela Company</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-logo"></div>
+        <nav>
+            <a href="#home-section">Home</a>
+            <a href="#our-profile-section">Our Profile</a>
+            <a href="#portfolio-section">Portfolio</a>
+            <a href="#message-us-section">Message Us</a>
+        </nav>
+    </header>
+
+    <hr />
+
+    <main>
+        <section id="home-section">
+            <form name="name-form" onsubmit="return validateNameForm()">
+
+                <input type="text" placeholder="nama anda" id="name-input" name="name-input">
+                <button id="submit" type="submit">Kirim</button>
+                <p id="error-name"></p>
+            </form>
+            <h1>Hi, this is <span id="name">-</span>. Nice to meet you!</h1>
+            <div class="banner-img"></div>
+        </section>
+
+        <hr />
+
+        <section id="our-profile-section">
+            <h2>Our Headquarter</h2>
+            <div class="headquarter-container">
+                <div class="circle">Jakarta</div>
+                <div class="circle">Bandung</div>
+                <div class="circle">Surabaya</div>
+            </div>
+        </section>
+
+        <hr />
+
+        <section id="portfolio-section">
+            <h2>Portfolio</h2>
+            <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+        </section>
+
+        <hr />
+
+        <section id="message-us-section">
+            <h1>Message Us</h1>
+            
+            <form name="message-form" onsubmit="return validateMessageForm()">
+                <div class="form-group">
+                    <strong>Nama:</strong>
+                    <input type="text" name="full-name" placeholder="Nama">
+                    <p id="error-full-name" class="error-message"></p>
+                </div>
+                
+                <div class="form-group">
+                    <strong>Tanggal Lahir:</strong>
+                    <input type="date" name="birth-date">
+                    <p id="error-birth-date" class="error-message"></p>
+                </div>
+                
+                <div class="form-group">
+                    <strong>Jenis Kelamin:</strong>
+                    <div class="gender-options">
+                        <label><input type="radio" name="gender" value="Laki-Laki"> Laki-Laki</label>
+                        <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                    </div>
+                    <p id="error-gender" class="error-message"></p>
+                </div>
+                
+                <div class="form-group">
+                    <strong>Pesan:</strong>
+                    <textarea name="messages" placeholder="Pesan"></textarea>
+                    <p id="error-messages" class="error-message"></p>
+                </div>
+                
+                <input type="submit" value="Submit">
+            </form>
+            
+            <hr>
+            
+            <div>
+                <p><strong>Nama:</strong> <span id="sender-full-name">-</span></p>
+                <p><strong>Tanggal Lahir:</strong> <span id="sender-birth-date">-</span></p>
+                <p><strong>Jenis Kelamin:</strong> <span id="sender-gender">-</span></p>
+                <p><strong>Pesan:</strong> <span id="sender-messages">-</span></p>
+            </div>
+        </section>
+        
+    </main>
+
+    <hr />
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Logo di tengah -->
+        <div class="footer-logo">
+            <img src="images/LogoOR.png" alt="Logo" width="100">
+        </div>
+        
+        <!-- Icon media sosial dengan link -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook" width="30">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram" width="30">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter" width="30">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn" width="30">
+            </a>
+        </div>
+        
+        <!-- Garis pembatas -->
+        <div class="footer-divider"></div>
+        
+        <!-- Tulisan copyright -->
+        <p class="copyright-text">
+            © 2024 Office Route. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

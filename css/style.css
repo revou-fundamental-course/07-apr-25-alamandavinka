@@ -1,0 +1,301 @@
+body {
+    font-family: sans-serif;
+    background-color: wheat;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0d1a56;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+    background-image: url('https://picsum.photos/200');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.banner-img {
+    height: 300px;
+    background-image: url('https://picsum.photos/1000/300');
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0;
+}
+
+main > section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.headquarter-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+form {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"], form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover, form button:hover {
+    background-color: darkslateblue;
+}
+
+#message-us-section {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 20px;
+}
+
+#message-us-section div {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #dcdcdc;
+}
+
+@media (max-width: 600px) {
+    .headquarter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Tambahkan ini ke CSS Anda */
+
+#message-us-section h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#message-us-section form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#message-us-section strong {
+    font-weight: bold;
+    color: #333;
+}
+
+#message-us-section input[type="text"],
+#message-us-section input[type="date"],
+#message-us-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#message-us-section textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap; /* Mencegah pemotongan teks */
+}
+
+#message-us-section input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#message-us-section input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style untuk bagian hasil submit */
+#message-us-section hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+#message-us-section div {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#message-us-section div p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#message-us-section div p span {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #message-us-section form {
+        padding: 15px;
+    }
+    
+    .gender-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0d1a56;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.copyright-text {
+    margin: 0;
+    font-size: 14px;
+}
+

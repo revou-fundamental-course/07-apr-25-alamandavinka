@@ -1,10 +1,22 @@
 body {
-    font-family: sans-serif;
-    background-color: wheat;
+    font-family: 'Poppins', sans-serif; /* font default untuk semua */
+    background-color: whitesmoke;
     margin: 0;
     padding: 0;
 }
 
+/* jarak antara tulisan hi dengan gambar */
+#home-section {
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
+}
+
+/* bagian header */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -15,13 +27,14 @@ body {
     z-index: 10;
 }
 
+/* logo office route pojok */
 .main-logo {
-    height: 50px;
-    width: 50px;
-    background-image: url('https://picsum.photos/200');
-    background-size: cover;
+    height: 60px;
+    width: 60px;
+    background-image: url('../images/LogoOR.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    border-radius: 50%;
 }
 
 nav {
@@ -33,17 +46,28 @@ nav {
 nav a {
     text-decoration: none;
     color: white;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: 8px 12px;
     border-radius: 4px;
 }
 
+/* foto banner */
 .banner-img {
-    height: 300px;
-    background-image: url('https://picsum.photos/1000/300');
+    height: 500px;
     background-size: cover;
-    background-position: center;
-    margin: 20px 0;
+    background-position: top;
+}
+
+.banner-1 {
+    background-image: url(../images/banner1.jpg);
+}
+
+.banner-2 {
+    background-image: url(../images/banner2.jpg);
+}
+
+.banner-3 {
+    background-image: url(../images/banner3.jpg);
 }
 
 main > section {
@@ -51,23 +75,187 @@ main > section {
     text-align: center;
 }
 
-.headquarter-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 20px;
+
+/* buat about us */
+.about-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
 }
 
-.circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid black;
+.about-container {
     display: flex;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 0 0 400px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* agar responsif */
+@media (max-width: 992px) {
+    .about-image {
+        flex: 0 0 350px;
+    }
+
+    .about-image img {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-image {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 400px;
+    }
+
+    .about-text {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+/* buat di our services */
+#portfolio-section {
+    padding: 50px 20px;
+    background-color: #f8fafc;
+    font-family: 'Poppins', sans-serif;
+}
+
+#portfolio-section h2 {
+    text-align: center;
+    margin-bottom: 55px;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.portfolio-cards {
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-image {
+    height: 100px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 20%;
+    height: 85%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin: 20px 20px 10px;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0 20px 20px;
+    margin: 0;
+}
+
+.service-features li {
+    padding: 8px 0;
+    color: #4a5568;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.5;
+}
+
+.service-features li:before {
+    content: "✓";
+    color: #4299e1;
+    position: absolute;
+    left: 0;
     font-weight: bold;
+}
+
+/* buat responsif juga */
+@media (max-width: 768px) {
+    #portfolio-section {
+        padding: 40px 15px;
+    }
+
+    #portfolio-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .portfolio-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #portfolio-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-features li {
+        font-size: 0.9rem;
+    }
 }
 
 form {
@@ -81,7 +269,8 @@ form label {
     margin: 10px 0;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -90,21 +279,24 @@ form input, form textarea {
     box-sizing: border-box;
 }
 
-form input[type="submit"], form button {
+form input[type="submit"],
+form button {
     margin-top: 10px;
     padding: 10px 20px;
     cursor: pointer;
-    background-color: black;
+    background-color: #0d1a56;
     color: white;
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
-form input[type="submit"]:hover, form button:hover {
+form input[type="submit"]:hover,
+form button:hover {
     background-color: darkslateblue;
 }
 
+/* di message us */
 #message-us-section {
     background-color: white;
     border-radius: 12px;
@@ -113,47 +305,6 @@ form input[type="submit"]:hover, form button:hover {
     max-width: 700px;
     padding: 20px;
 }
-
-#message-us-section div {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 20px;
-    text-align: left;
-}
-
-.error-message {
-    color: red;
-    font-size: 0.9em;
-    margin-top: -10px;
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #dcdcdc;
-}
-
-@media (max-width: 600px) {
-    .headquarter-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .main-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-
-/* Tambahkan ini ke CSS Anda */
 
 #message-us-section h1 {
     text-align: center;
@@ -165,7 +316,7 @@ footer {
     background-color: white;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -205,11 +356,11 @@ footer {
     display: flex;
     align-items: center;
     gap: 5px;
-    white-space: nowrap; /* Mencegah pemotongan teks */
+    white-space: nowrap;
 }
 
 #message-us-section input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #0d1a56;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -221,7 +372,7 @@ footer {
 }
 
 #message-us-section input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: darkslateblue;
 }
 
 /* Style untuk bagian hasil submit */
@@ -248,19 +399,27 @@ footer {
     color: #555;
 }
 
-/* Responsive adjustments */
+/* warna buat pesan harus diisi */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive lagi */
 @media (max-width: 600px) {
     #message-us-section form {
         padding: 15px;
     }
-    
+
     .gender-options {
         flex-direction: column;
         gap: 10px;
     }
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: #0d1a56;
     color: white;
@@ -299,3 +458,28 @@ footer {
     font-size: 14px;
 }
 
+/* Responsif header dan nav */
+@media only screen and (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .main-logo {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
